@@ -105,7 +105,7 @@ ul.links {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin: 40px 0;
+  margin-top: 20px;
 }
 ul.links li {
   padding: 5px 0;
@@ -113,7 +113,7 @@ ul.links li {
 ul.links li a {
   color: #232d4b;
 
-  font-weight: 600;
+  font-weight: 500;
   transition: color 0.2s ease-in-out;
 }
 ul.links li a:hover {
@@ -153,13 +153,18 @@ h1 .break {
 }
 
 h3 {
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 600;
   margin: 0;
+  color: #232d4b;
 }
 
 .logo-wrap {
-  width: 200px;
+  flex: 0 0 280px;
+}
+
+.logo-wrap img {
+  margin: 0 auto;
 }
 
 .white {
@@ -193,14 +198,10 @@ h3 {
 .header__inner {
   width: 80%;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 10px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-
-header {
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
 }
 
 .footer__inner {
@@ -321,12 +322,26 @@ footer {
   color: #232d4b;
   padding-right: 25px;
   text-decoration: none;
+  height: 32px;
+  line-height: 32px;
+  display: inline-block;
+  background: #232d4b;
+  color: white;
+  padding: 0 10px;
+  border-radius: 3px;
+}
+
+.button-wrap {
+  margin-top: 20px;
+}
+
+.arrow-btn:nth-child(1) {
+  margin-right: 10px;
 }
 .arrow-btn:after {
   content: '';
   width: 16px;
   height: 16px;
-  position: absolute;
   right: 0;
   top: 50%;
   margin-top: -8px;
@@ -421,13 +436,33 @@ button.default:hover {
   transform: translateY(-2px);
 }
 
+.programs-wrap {
+  margin: 40px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .logo-wrap {
+    flex: 0 0 260px;
+  }
+  .button-wrap {
+    margin-top: 0px;
+  }
+
+  .logo-wrap img {
+    margin-left: 0;
+  }
+  .header__inner {
+    justify-content: space-between;
+  }
+
+  header {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
 @media screen and (min-width: 1080px) {
   section {
     padding: 6rem 0;
-  }
-
-  .logo-wrap {
-    width: 320px;
   }
 
   .footer__inner {

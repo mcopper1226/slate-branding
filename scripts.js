@@ -44,16 +44,23 @@ function getUrlParams(url) {
 let params = getUrlParams();
 
 const mcintireLogo =
-  'https://s3-us-west-2.amazonaws.com/s.cdpn.io/674055/logo-uvaMcIntire.svg';
+  'https://s3-us-west-2.amazonaws.com/s.cdpn.io/674055/logo-mcintireFull-01.svg';
 const dardenLogo =
   'https://s3-us-west-2.amazonaws.com/s.cdpn.io/674055/logo-darden-mcintire.svg';
 const anchor = document.querySelector('.logo-wrap');
 const logo = anchor.children[0];
+const dardenLinks = document.querySelector('#darden');
+const mcintireLinks = document.querySelector('#mcintire');
 
 if (params.program == 'msba') {
   anchor.href = 'https://msba.virginia.edu';
   logo.src = dardenLogo;
+
+  dardenLinks.style.display = 'block';
+  mcintireLinks.style.display = 'none';
 } else {
   anchor.href = 'https://commerce.virginia.edu';
   logo.src = mcintireLogo;
+  dardenLinks.style.display = 'none';
+  mcintireLinks.style.display = 'block';
 }
